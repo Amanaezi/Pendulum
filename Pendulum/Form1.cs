@@ -28,16 +28,16 @@ namespace Pendulum
             g = CreateGraphics();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
-            pb.MoveWithBounce(timer1.Interval / 1000.0, p1, p2, p3, p4, p1);
+            pb.MoveWithBounce(Timer1.Interval / 1000.0, p1, p2, p3, p4, p1);
             pb.Update();
         }
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
             g.DrawLine(Pens.Red, (int)p1.X, (int)p1.Y, (int)p2.X, (int)p2.Y);
-            timer1.Start();
+            Timer1.Start();
         }
 
         private void Form1_Load(object sender, EventArgs e)

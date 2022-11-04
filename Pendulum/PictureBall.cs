@@ -36,9 +36,11 @@ namespace Pendulum
 
         public static PictureBox CreatePb(Control parent, int size = 20)
         {
-            PictureBox pb = new PictureBox();
-            pb.Size = new Size(size, size);
-            pb.SizeMode = PictureBoxSizeMode.Zoom;
+            PictureBox pb = new PictureBox
+            {
+                Size = new Size(size, size),
+                SizeMode = PictureBoxSizeMode.Zoom
+            };
             parent.Controls.Add(pb);
             return pb;
         }
