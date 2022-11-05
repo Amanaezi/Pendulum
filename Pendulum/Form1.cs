@@ -24,12 +24,13 @@ namespace Pendulum
             p3 = new VectorLib.Point(Width, -10);
             p4 = new VectorLib.Point(-10, -10);
             pb = new PictureBall(Color.Green, this);
-            pb.Ball.V = new Vector(200, 300);
+            pb.Ball.V = new Vector(500, 600);
             g = CreateGraphics();
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
+            g.DrawLine(Pens.Red, (int)p1.X, (int)p1.Y, (int)p2.X, (int)p2.Y);
             pb.MoveWithBounce(Timer1.Interval / 1000.0, p1, p2, p3, p4, p1);
             pb.Update();
         }

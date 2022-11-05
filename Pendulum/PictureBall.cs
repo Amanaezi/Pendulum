@@ -14,7 +14,7 @@ namespace Pendulum
         public PictureBox Pb { get; set; }
         public double Scale { get; set; }
 
-        private Control parent;
+        private readonly Control parent;
 
         
 
