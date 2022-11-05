@@ -14,15 +14,15 @@ namespace Pendulum
     public partial class Form1 : Form
     {
         PictureBall pb;
-        VectorLib.Point p1, p2, p3, p4;
+        VectorLib.PointD p1, p2, p3, p4;
         Graphics g;
         public Form1()
         {
             InitializeComponent();
-            p1 = new VectorLib.Point(-10, ClientSize.Height);
-            p2 = new VectorLib.Point(Width, ClientSize.Height / 2);
-            p3 = new VectorLib.Point(Width, -10);
-            p4 = new VectorLib.Point(-10, -10);
+            p1 = new PointD(-10, ClientSize.Height);
+            p2 = new PointD(Width, ClientSize.Height / 2);
+            p3 = new PointD(Width, -10);
+            p4 = new PointD(-10, -10);
             pb = new PictureBall(Color.Green, this);
             pb.Ball.V = new Vector(500, 600);
             g = CreateGraphics();

@@ -52,7 +52,7 @@ namespace Pendulum
             return pb;
         }
 
-        public void MoveWithBounce(double dt, params VectorLib.Point[] points)
+        public void MoveWithBounce(double dt, params PointD[] points)
         {
             Ball.Bounce(points);
             Ball.Mp.Move(dt);
